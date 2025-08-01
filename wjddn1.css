@@ -7,7 +7,7 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
 #wrapper {
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -21,6 +21,7 @@ img { max-width: 100%; display: block; }
 }
 
 .header-left {
+	  margin-top: -90px;
   justify-self: start;
 }
 
@@ -29,6 +30,7 @@ img { max-width: 100%; display: block; }
 }
 
 .header-right {
+  margin-top: -100px;
   justify-self: end;
 }
 
@@ -70,12 +72,13 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 30px;
   border-top: 1px solid #eee;
   padding-top: 10px;
 }
 .infoMenu li {
+	  padding: 5px 10px;
   position: relative;
 }
 .infoMenu li a {
@@ -153,6 +156,7 @@ img { max-width: 100%; display: block; }
 
 /* 객실 정보 */
 #A101 {
+	margin-top: 200px;
   display: flex;
   gap: 20px;
   font-size: 14px;
@@ -169,24 +173,20 @@ img { max-width: 100%; display: block; }
   padding: 10px 0;
 }
 
-/* 푸터 아코디언 */
-.footer-title {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #333;
-}
+/* Accordion */
+
 .accordion-section {
   width: 100%;
-  max-width: 900px;
+  max-width: 1920px;
   margin: 60px auto;
   background-color: #f7f7f7;
   border-radius: 8px;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 12px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
 .accordion {
   background-color: #efefef;
   color: #333;
@@ -194,28 +194,34 @@ img { max-width: 100%; display: block; }
   padding: 18px 24px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: center;
   outline: none;
   transition: background-color 0.2s ease;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   border-bottom: 1px solid #ddd;
 }
+
 .accordion:hover {
   background-color: #e2e2e2;
 }
+
 .panel {
   background-color: #fff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding: 0 24px;
+   padding: 0;
+  text-align: center;
+
 }
+
 .panel p {
   margin: 18px 0;
   color: #555;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 12px;
+  text-align: center;
 }
 
 /* 반응형 */

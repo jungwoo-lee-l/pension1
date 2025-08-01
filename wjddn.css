@@ -301,7 +301,9 @@ table, th, td { border: 1px solid #000; }
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding: 0 24px;
+   padding: 0;
+  text-align: center;
+
 }
 
 .panel p {
@@ -309,6 +311,7 @@ table, th, td { border: 1px solid #000; }
   color: #555;
   line-height: 1.6;
   font-size: 15px;
+  text-align: center;
 }
 
 /* Responsive */
