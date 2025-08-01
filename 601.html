@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>601호 화면</title>
+  <link rel="stylesheet" type="text/css" href="wjddn1.css">
+  <link rel="shortcut icon" href="images/logo.png">
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <div class="header-grid">
+        <!-- 좌측: 검색창 -->
+        <div class="header-left">
+          <div class="search">
+            <input type="text" placeholder="검색">
+            <img src="images/search.png" alt="검색 아이콘">
+          </div>
+        </div>
+
+        <!-- 가운데: 로고 -->
+        <div class="header-center">
+          <h1 class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+          </h1>
+        </div>
+
+        <!-- 우측: 로그인 메뉴 -->
+        <div class="header-right">
+          <ul class="Menu">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">My Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 네비게이션 메뉴 -->
+      <ul class="infoMenu">
+        <li><a href="#">PENSION</a>
+          <ul>
+            <li><a href="#">그날펜션 소개</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="#">ROOM</a>
+          <ul>
+            <li><a href="#">ROOM101</a></li>
+            <li><a href="#">ROOM201</a></li>
+            <li><a href="#">ROOM301</a></li>
+            <li><a href="#">ROOM401</a></li>
+            <li><a href="#">ROOM501</a></li>
+            <li><a href="#">ROOM601</a></li>
+          </ul>
+        </li>
+        <li><a href="#">AROUND</a><ul><li><a href="#">주변 관광지</a></li></ul></li>
+        <li><a href="#">RESERVATION</a><ul><li><a href="#">예약 안내</a></li></ul></li>
+        <li><a href="#">GALLERY</a><ul><li><a href="#">갤러리</a></li></ul></li>
+        <li><a href="#">LOCATION</a><ul><li><a href="#">펜션 주소</a></li></ul></li>
+      </ul>
+    </header>
+
+    <div id="container">
+      <div class="beach">
+        <img src="images/601.jpg" alt="601호 이미지" class="room-image" />
+      </div>
+
+      <div class="room-summary">
+        <h2>601호 (2인 기준)</h2>
+        <p>미니멀한 감성의 2인용으로, 연인에게 적합합니다.</p>
+      </div>
+
+      <div class="STAY" style="text-align: center;">
+        <a href="#" class="reserve-btn">예약하기</a>
+      </div>
+
+      <div id="A101">
+        <ul class="a101">
+          <li><strong>항목</strong></li>
+          <li>인원</li>
+          <li>평형 / 내부시설</li>
+          <li>구비물품</li>
+          <li>비고</li>
+        </ul>
+        <ul class="ab101">
+          <li><strong>내용</strong></li>
+          <li>기준인원: 2명, 최대인원: 4명</li>
+          <li>복층 20평형 - 침대1, 화장실, 테라스 (4인용 바베큐장)</li>
+          <li>TV(55인치), 샴푸, 린스, 바디워시, 수건, 드라이기, 냉장고, 주방기구 일체</li>
+          <li>주차 가능 대수: 1대</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <section class="accordion-section">
+        <h3 class="footer-title">이용안내</h3>
+
+        <button class="accordion">사업자 정보</button>
+        <div class="panel">
+          <p>사업자명: ㈜그날펜션<br>
+            대표자: 이정우<br>
+            주소: 부산시 해운대구 ...<br>
+            사업자등록번호: 123-45-67890</p>
+        </div>
+
+        <button class="accordion">법적 고지사항</button>
+        <div class="panel">
+          <p>해당 내용은 준비 중입니다.</p>
+        </div>
+
+        <button class="accordion">입금 은행</button>
+        <div class="panel">
+          <p>1234-5678-9123-45 (이정우)</p>
+        </div>
+
+        <button class="accordion">고객 지원</button>
+        <div class="panel">
+          <p>고객센터: 1234-5678 | 운영시간: 평일 09:00 ~ 18:00</p>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll(".accordion").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+﻿@charset "utf-8";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; color: #333; }
+ul, li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left {
+  justify-self: start;
+}
+
+.header-center {
+  justify-self: center;
+}
+
+.header-right {
+  justify-self: end;
+}
+
+.logo img {
+  width: 130px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search input {
+  padding: 6px 10px;
+  width: 160px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search img {
+  width: 17px;
+  height: 17px;
+}
+
+.Menu {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+.Menu li a {
+  color: gray;
+  transition: color 0.2s ease;
+}
+.Menu li a:hover {
+  color: black;
+}
+
+.infoMenu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.infoMenu li {
+  position: relative;
+}
+.infoMenu li a {
+  color: gray;
+  transition: color 0.2s ease;
+}
+.infoMenu li a:hover {
+  color: #7d7a77;
+  text-decoration: underline;
+}
+.infoMenu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  white-space: nowrap;
+}
+.infoMenu li:hover ul {
+  display: block;
+}
+.infoMenu li ul li {
+  padding: 5px 10px;
+}
+.infoMenu li ul li a {
+  font-size: 12px;
+  color: #000;
+}
+.infoMenu li ul li a:hover {
+  color: skyblue;
+}
+
+/* ROOM SUMMARY */
+.room-summary {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+.room-summary h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.room-summary p {
+  font-size: 16px;
+  color: #555;
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.reserve-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #7d7a77;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin: 20px auto;
+}
+.reserve-btn:hover {
+  background-color: #5a5755;
+}
+
+/* 객실 정보 */
+#A101 {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 6px;
+}
+.a101, .ab101 {
+  width: 50%;
+}
+.a101 li, .ab101 li {
+  padding: 10px 0;
+}
+
+/* 푸터 아코디언 */
+.footer-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.accordion-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.accordion {
+  background-color: #efefef;
+  color: #333;
+  cursor: pointer;
+  padding: 18px 24px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.accordion:hover {
+  background-color: #e2e2e2;
+}
+.panel {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 24px;
+}
+.panel p {
+  margin: 18px 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .header-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .Menu, .infoMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search input {
+    width: 100%;
+    max-width: 250px;
+  }
+  #A101 {
+    flex-direction: column;
+  }
+  .a101, .ab101 {
+    width: 100%;
+  }
+}
